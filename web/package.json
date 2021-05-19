@@ -1,15 +1,11 @@
 {
-  "name": "typescript-nextjs-starter",
-  "description": "A TypeScript starter for Next.js that includes all you need to build amazing projects",
+  "name": "shoppingify-frontend",
+  "description": "",
   "version": "1.0.0",
   "private": true,
-  "author": "João Pedro Schmitz <hey@joaopedro.dev> (@jpedroschmitz)",
+  "author": "",
   "license": "MIT",
-  "keywords": [
-    "nextjs",
-    "starter",
-    "typescript"
-  ],
+  "keywords": [],
   "scripts": {
     "dev": "next",
     "build": "next build",
@@ -20,10 +16,7 @@
     "postinstall": "husky install"
   },
   "lint-staged": {
-    "./src/**/*.{ts,js,jsx,tsx}": [
-      "yarn lint --fix",
-      "yarn format"
-    ]
+    "./src/**/*.{ts,js,jsx,tsx}": ["npm run lint --fix", "npm run format"]
   },
   "dependencies": {
     "next": "10.2.0",
