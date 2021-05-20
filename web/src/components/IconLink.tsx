@@ -18,7 +18,7 @@ const NavLink: React.FC<Props> = ({
   leaveValue,
   Icon,
 }) => {
-  const [opacity, setOpacity] = useDebouncedState(0, 700);
+  const [opacity, setOpacity, setOpacityNow] = useDebouncedState(0, 500);
   return (
     <div className="relative w-full h-1/3">
       <motion.div
@@ -37,7 +37,7 @@ const NavLink: React.FC<Props> = ({
           }}
           onMouseLeave={() => {
             setSliderPosition(leaveValue);
-            setOpacity(0);
+            setOpacityNow(0);
           }}
           className="inline-grid place-items-center w-full h-full"
         >
