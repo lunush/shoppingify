@@ -7,6 +7,7 @@ import { IconType } from 'react-icons';
 interface Props {
   title: string;
   setSliderPosition: Dispatch<SetStateAction<number>>;
+  setCurrentPageSliderPosition: Dispatch<SetStateAction<number>>;
   enterValue: number;
   leaveValue: number;
   Icon: IconType;
@@ -14,6 +15,7 @@ interface Props {
 const NavLink: React.FC<Props> = ({
   title,
   setSliderPosition,
+  setCurrentPageSliderPosition,
   enterValue,
   leaveValue,
   Icon,
@@ -39,6 +41,7 @@ const NavLink: React.FC<Props> = ({
             setSliderPosition(leaveValue);
             setOpacityNow(0);
           }}
+          onClick={() => setCurrentPageSliderPosition(enterValue)}
           className="inline-grid place-items-center w-full h-full"
         >
           <Icon fontSize={26} />

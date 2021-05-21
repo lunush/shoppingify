@@ -11,7 +11,7 @@ interface Props {}
 const IconLinksContainer: React.FC<Props> = () => {
   const { observe, height } = useDimensions();
   const [sliderPosition, setSliderPosition] = useState(0);
-  const [currentPageSliderPosition] = useState(0);
+  const [currentPageSliderPosition, setCurrentPageSliderPosition] = useState(0);
   return (
     <div className="relative h-1/3 flex flex-col justify-between" ref={observe}>
       <motion.div
@@ -25,6 +25,7 @@ const IconLinksContainer: React.FC<Props> = () => {
         title="items"
         Icon={GiHamburgerMenu}
         setSliderPosition={setSliderPosition}
+        setCurrentPageSliderPosition={setCurrentPageSliderPosition}
         enterValue={0}
         leaveValue={currentPageSliderPosition}
       />
@@ -32,6 +33,7 @@ const IconLinksContainer: React.FC<Props> = () => {
         title="history"
         Icon={BsArrowCounterclockwise}
         setSliderPosition={setSliderPosition}
+        setCurrentPageSliderPosition={setCurrentPageSliderPosition}
         enterValue={height / 2 - height / 6}
         leaveValue={currentPageSliderPosition}
       />
@@ -39,6 +41,7 @@ const IconLinksContainer: React.FC<Props> = () => {
         title="analytics"
         Icon={GoGraph}
         setSliderPosition={setSliderPosition}
+        setCurrentPageSliderPosition={setCurrentPageSliderPosition}
         enterValue={height - height / 3}
         leaveValue={currentPageSliderPosition}
       />
