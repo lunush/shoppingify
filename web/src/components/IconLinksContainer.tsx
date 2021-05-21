@@ -16,7 +16,7 @@ const IconLinksContainer: React.FC<Props> = () => {
     <div className="relative h-1/3 flex flex-col justify-between" ref={observe}>
       <motion.div
         className="absolute left-0 top-0 grid place-items-center"
-        style={{ x: -27, y: sliderPosition, height: height / 3, width: 10 }}
+        style={{ x: -29, y: sliderPosition, height: height / 3, width: 10 }}
         animate={{ y: sliderPosition }}
       >
         <div className="bg-yellow-500 rounded w-full" style={{ height: 50 }} />
