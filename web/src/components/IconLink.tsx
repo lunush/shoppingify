@@ -44,7 +44,7 @@ const NavLink: React.FC<Props> = ({
           onClick={() => setCurrentPageSliderPosition(enterValue)}
           className="inline-grid place-items-center w-full h-full"
         >
-          <Icon fontSize={26} />
+          <Icon fontSize={22} />
         </a>
       </NextLink>
     </div>

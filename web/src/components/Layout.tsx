@@ -13,19 +13,22 @@ const Layout: React.FC<Props> = ({ children }) => {
         <title>Shoppingify</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="bg-white h-full flex flex-col p-3 items-center justify-between">
+      <div className="bg-white h-full flex flex-col p-4 items-center justify-between">
         <Image
           src="/assets/images/logo.svg"
           alt="Logo"
-          width={50}
-          height={50}
+          width={40}
+          height={40}
         />
         <IconLinksContainer />
-        <button className="relative rounded-full bg-yellow-500 p-3 text-white hover:bg-yellow-400">
-          <div className="-top-2 -right-1 absolute bg-red-500 text-white rounded w-6 h-6">
+        <button className="relative rounded-full bg-yellow-500 p-2 text-white hover:bg-yellow-400">
+          <div
+            className="-top-2 -right-2 absolute bg-red-500 text-white rounded w-5 h-5
+          text-sm"
+          >
             3
           </div>
-          <FiShoppingCart fontSize={26} />
+          <FiShoppingCart fontSize={20} />
         </button>
       </div>
       {children}
