@@ -11,7 +11,7 @@ const Layout: React.FC<Props> = ({ children }) => {
     <div className="bg-gray-100 h-screen w-screen flex">
       <Head>
         <title>Shoppingify</title>
-        <link rel="icon" href="/assets/images/favicon.ico" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="bg-white h-full flex flex-col p-3 items-center justify-between">
         <Image
