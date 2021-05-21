@@ -38,7 +38,7 @@ const IconLinksContainer: React.FC<Props> = () => {
         leaveValue={currentPageSliderPosition}
       />
       <IconLink
-        title="analytics"
+        title="statistics"
         Icon={GoGraph}
         setSliderPosition={setSliderPosition}
         setCurrentPageSliderPosition={setCurrentPageSliderPosition}
