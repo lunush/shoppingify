@@ -20,7 +20,7 @@ export const useDebouncedState = <T,>(
       const handler = setTimeout(() => setDebouncedValue(value), delay);
       return () => clearTimeout(handler);
     }
-  }, [value]);
+  }, [value, runnable, delay]);
 
   return [debouncedValue, setValue, setValueNow];
 };
