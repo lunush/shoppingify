@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import { FiShoppingCart } from 'react-icons/fi';
 import IconLinksContainer from './IconLinksContainer';
+import ShoppingListDrawer from './ShoppingListDrawer';
 
 interface Props {}
 
@@ -13,7 +14,7 @@ const Layout: React.FC<Props> = ({ children }) => {
         <title>Shoppingify</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="bg-white h-full flex flex-col py-4 items-center justify-between">
+      <div className="bg-white h-full flex-none flex flex-col py-4 items-center justify-between">
         <Image
           src="/assets/images/logo.svg"
           alt="Logo"
@@ -31,7 +32,8 @@ const Layout: React.FC<Props> = ({ children }) => {
           <FiShoppingCart fontSize={20} />
         </button>
       </div>
-      {children}
+      <div className="flex-grow">{children}</div>
+      <ShoppingListDrawer />
     </div>
   );
 };
