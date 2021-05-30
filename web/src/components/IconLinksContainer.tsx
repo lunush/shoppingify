@@ -14,16 +14,16 @@ const IconLinksContainer: React.FC<Props> = () => {
   const router = useRouter();
   const [sliderPosition, setSliderPosition] = useState(0);
 
-  const pageSliderPosition: { [key: string]: () => number } = {
-    '/': () => 0,
-    '/items': () => 0,
-    '/history': () => height / 2 - height / 6,
-    '/statistics': () => height - height / 3,
+  const pageSliderPosition: { [key: string]: number } = {
+    '/': 0,
+    '/items': 0,
+    '/history': height / 2 - height / 6,
+    '/statistics': height - height / 3,
   };
 
   // Set proper sliderPosition on render
   useEffect(() => {
-    setSliderPosition(pageSliderPosition[router.asPath]());
+    setSliderPosition(pageSliderPosition[router.asPath]);
   }, [height]);
 
   return (
@@ -43,24 +43,24 @@ const IconLinksContainer: React.FC<Props> = () => {
         href="/items"
         Icon={GiHamburgerMenu}
         setSliderPosition={setSliderPosition}
-        enterValue={pageSliderPosition['/items']()}
-        leaveValue={pageSliderPosition[router.asPath]()}
+        enterValue={pageSliderPosition['/items']}
+        leaveValue={pageSliderPosition[router.asPath]}
       />
       <IconLink
         title="history"
         href="/history"
         Icon={BsArrowCounterclockwise}
         setSliderPosition={setSliderPosition}
-        enterValue={pageSliderPosition['/history']()}
-        leaveValue={pageSliderPosition[router.asPath]()}
+        enterValue={pageSliderPosition['/history']}
+        leaveValue={pageSliderPosition[router.asPath]}
       />
       <IconLink
         title="statistics"
         href="/statistics"
         Icon={GoGraph}
         setSliderPosition={setSliderPosition}
-        enterValue={pageSliderPosition['/statistics']()}
-        leaveValue={pageSliderPosition[router.asPath]()}
+        enterValue={pageSliderPosition['/statistics']}
+        leaveValue={pageSliderPosition[router.asPath]}
       />
     </div>
   );
