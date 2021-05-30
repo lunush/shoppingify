@@ -13,7 +13,7 @@ const Layout: React.FC<Props> = ({ children }) => {
         <title>Shoppingify</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="bg-white h-full flex flex-col p-4 items-center justify-between">
+      <div className="bg-white h-full flex flex-col py-4 items-center justify-between">
         <Image
           src="/assets/images/logo.svg"
           alt="Logo"

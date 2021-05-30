@@ -6,16 +6,16 @@ import { IconType } from 'react-icons';
 
 interface Props {
   title: string;
+  href: string;
   setSliderPosition: Dispatch<SetStateAction<number>>;
-  setCurrentPageSliderPosition: Dispatch<SetStateAction<number>>;
   enterValue: number;
   leaveValue: number;
   Icon: IconType;
 }
 const NavLink: React.FC<Props> = ({
   title,
+  href,
   setSliderPosition,
-  setCurrentPageSliderPosition,
   enterValue,
   leaveValue,
   Icon,
@@ -26,12 +26,12 @@ const NavLink: React.FC<Props> = ({
       <motion.div
         className="absolute transform -translate-y-1/2 -translate-x-1/2 bg-black
           text-white rounded text-center text-sm"
-        style={{ left: 80, top: '50%', width: 80, opacity }}
+        style={{ left: 90, top: '50%', width: 80, opacity }}
         animate={{ opacity }}
       >
         {title}
       </motion.div>
-      <NextLink href={`/${title}`}>
+      <NextLink href={href}>
         <a
           onMouseEnter={() => {
             setSliderPosition(enterValue);
@@ -41,7 +41,6 @@ const NavLink: React.FC<Props> = ({
             setSliderPosition(leaveValue);
             setOpacityNow(0);
           }}
-          onClick={() => setCurrentPageSliderPosition(enterValue)}
           className="inline-grid place-items-center w-full h-full"
         >
           <Icon fontSize={22} />
