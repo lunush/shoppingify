@@ -15,6 +15,7 @@ const IconLinksContainer: React.FC<Props> = () => {
   const [sliderPosition, setSliderPosition] = useState(0);
 
   const pageSliderPosition: { [key: string]: () => number } = {
+    '/': () => 0,
     '/items': () => 0,
     '/history': () => height / 2 - height / 6,
     '/statistics': () => height - height / 3,

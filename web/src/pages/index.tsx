@@ -1,5 +1,14 @@
+import { useRouter } from 'next/router';
+import { useEffect } from 'react';
+
 const Home = () => {
-  return <div>Home</div>;
+  const router = useRouter();
+
+  useEffect(() => {
+    router.push('/items');
+  }, []);
+
+  return <div></div>;
 };
 
 export default Home;
