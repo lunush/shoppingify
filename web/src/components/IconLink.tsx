@@ -43,7 +43,7 @@ const NavLink: React.FC<Props> = ({
           }}
           className="inline-grid place-items-center w-full h-full"
         >
-          <Icon fontSize={22} />
+          <Icon fontSize="1.4rem" />
         </a>
       </NextLink>
     </div>
