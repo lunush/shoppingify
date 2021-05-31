@@ -9,7 +9,7 @@ interface Props {}
 
 const Layout: React.FC<Props> = ({ children }) => {
   return (
-    <div className="bg-gray-100 h-screen w-screen flex">
+    <div className="relative bg-gray-100 h-screen w-screen flex">
       <Head>
         <title>Shoppingify</title>
         <link rel="icon" href="/favicon.ico" />
@@ -32,7 +32,7 @@ const Layout: React.FC<Props> = ({ children }) => {
           <FiShoppingCart fontSize={20} />
         </button>
       </div>
-      <div className="flex-grow z-0">{children}</div>
+      <div className="flex-grow z-0 overflow-y-scroll">{children}</div>
       <ShoppingListDrawer />
     </div>
   );
