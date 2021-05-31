@@ -14,7 +14,7 @@ const Layout: React.FC<Props> = ({ children }) => {
         <title>Shoppingify</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="bg-white h-full flex-none flex flex-col py-4 items-center justify-between">
+      <div className="bg-white h-full flex-none flex flex-col py-4 items-center justify-between z-10">
         <Image
           src="/assets/images/logo.svg"
           alt="Logo"
@@ -32,7 +32,7 @@ const Layout: React.FC<Props> = ({ children }) => {
           <FiShoppingCart fontSize={20} />
         </button>
       </div>
-      <div className="flex-grow">{children}</div>
+      <div className="flex-grow z-0">{children}</div>
       <ShoppingListDrawer />
     </div>
   );
