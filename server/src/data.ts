@@ -15,6 +15,7 @@ export const categories: Category[] = [
   { id: 3, name: "Pets" },
   { id: 4, name: "Beverages" },
   { id: 5, name: "Nutritional Supplements" },
+  { id: 6, name: "Bread" },
 ];
 
 export const items: Item[] = [
@@ -30,7 +31,7 @@ export const items: Item[] = [
   },
   {
     id: 3,
-    name: "Chicken 1KG",
+    name: "Chicken, 1KG",
     category: "Meat and Fish",
   },
   {
@@ -95,22 +96,22 @@ export const items: Item[] = [
   },
   {
     id: 16,
-    name: "Creatine Mnohydrate 1KG",
+    name: "Creatine Monohydrate, 1KG",
     category: "Nutritional Supplements",
   },
   {
     id: 17,
-    name: "Whey Protein Powder 5KG",
+    name: "Whey Protein Powder, 5KG",
     category: "Nutritional Supplements",
   },
   {
     id: 18,
-    name: "Omega 3 250 Capsules",
+    name: "Omega 3, 250 Capsules",
     category: "Nutritional Supplements",
   },
   {
     id: 19,
-    name: "Multivitamines 90 Gammies",
+    name: "Multivitamines, 90 Gammies",
     category: "Nutritional Supplements",
   },
   {
