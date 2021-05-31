@@ -1,5 +1,6 @@
 import { useGetCategoriesQuery, useGetItemsQuery } from '@/graphql/generated';
 import { AiOutlinePlus } from 'react-icons/ai';
+import Head from 'next/head';
 
 const Items = () => {
   const { data: categoriesData } = useGetCategoriesQuery();
@@ -10,6 +11,9 @@ const Items = () => {
 
   return (
     <div className="px-10 py-4">
+      <Head>
+        <title>Items</title>
+      </Head>
       {categoriesData?.getCategories.map((category) => {
         if (
           !itemsData?.getItems.find((item) => item.category === category.name)

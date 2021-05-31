@@ -1,5 +1,14 @@
+import Head from 'next/head';
+
 const History = () => {
-  return <div>History</div>;
+  return (
+    <div>
+      <Head>
+        <title>History</title>
+      </Head>
+      History
+    </div>
+  );
 };
 
 export default History;
